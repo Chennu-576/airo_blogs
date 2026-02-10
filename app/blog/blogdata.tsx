@@ -12,7 +12,7 @@ export interface BlogPost {
 
 export const featuredPosts: BlogPost[] = [
   {
-    id: '1',
+    id: 'data-segmentation',
     title: 'Advanced Data Segmentation Strategies for 2024',
     excerpt: 'Learn how to segment your B2B data for maximum conversion rates and ROI.',
     category: 'Data Analytics',
@@ -107,4 +107,10 @@ export const editorsPicks: BlogPost[] = [
     readTime: '9 min read',
     image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
   }
+];
+
+export const allBlogs: BlogPost[] = [
+  ...featuredPosts,
+  ...popularPosts,
+  ...editorsPicks,
 ];
