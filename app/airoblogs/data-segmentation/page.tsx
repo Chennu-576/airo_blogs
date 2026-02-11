@@ -518,7 +518,7 @@ export default function BlogDetailPage() {
           </aside>
 
           {/* BLOG */}
-          <article ref={contentRef} className="space-y-14">
+          <article ref={contentRef} className="space-y-4">
             {sections.map((title, i) => (
               <section key={i} id={`section-${i}`}>
                 <h2
@@ -538,8 +538,8 @@ export default function BlogDetailPage() {
           </article>
 
           {/* DEMO FORM */}
-          <aside className="hidden lg:block">
-            <div className="sticky top-28 rounded-xl bg-black p-6">
+          <aside className="block">
+            <div className="sticky top-28 rounded-xl bg-[rgb(180,94,207)] p-6">
               <h3 className="text-xl font-semibold text-white">
                 Get a Free Demo
               </h3>
@@ -550,7 +550,7 @@ export default function BlogDetailPage() {
                 <input className="w-full rounded-md px-4 py-2 text-sm" placeholder="Phone Number" />
                 <input className="w-full rounded-md px-4 py-2 text-sm" placeholder="Website URL" />
                 <textarea className="w-full rounded-md px-4 py-2 text-sm" rows={3} placeholder="Additional Info" />
-                <button className="w-full bg-[#b45ecf] text-white py-2 rounded-md font-medium">
+                <button className="w-full bg-[black] text-white py-2 rounded-md font-medium">
                   Request Demo
                 </button>
               </form>
@@ -560,7 +560,7 @@ export default function BlogDetailPage() {
       </section>
 
       {/* AUTHOR */}
-      <section className="mx-auto max-w-4xl px-6 pb-20">
+      <section className="mx-auto max-w-4xl px-4 pb-0">
         <h3 className="text-xl font-semibold text-black">
           About the Author
         </h3>
@@ -573,7 +573,7 @@ export default function BlogDetailPage() {
       <Newsletter />
 
       {/* RELATED */}
-      <section className="py-16 bg-white">
+      <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-black mb-8">
             Related articles

@@ -74,7 +74,7 @@ export default async function ConnectPage() {
           Connect To Your Target Audience
         </h1>
         <p className="text-base md:text-lg text-white/90 leading-relaxed mb-3 md:mb-4">
-          DataCaptive will guide you on finding and connecting with your target audience.
+          360airo will guide you on finding and connecting with your target audience.
         </p>
         <p className="text-base md:text-lg text-white/90 leading-relaxed">
           Increase engagements with your leads through strategic articles, tools, and tactics for GDPR compliance, lead generation, database management, and sales optimization.
@@ -137,9 +137,9 @@ export default async function ConnectPage() {
       </section>
 
       {/* Editor Picks Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-4 md:py-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center justify-between mb-6">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">
                 Editor&apos;s Pick
@@ -164,23 +164,10 @@ export default async function ConnectPage() {
       </section>
       
       {/* Regular Posts Section */}
-      <section className="py-6 md:py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          
-          {/* Show More Button */}
-          {posts && posts.length > 0 && (
-            <div className="mt-12 text-center">
-              <button className="px-8 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-800 transition-colors duration-300">
-                View All Articles
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
+     
 
       {/* Newsletter Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-blue-50 to-purple-50">
+      <section className="py-2 md:py-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Newsletter />
         </div>

@@ -65,16 +65,16 @@ export default async function ConnectPage() {
   return (
     <div className="bg-white">
       {/* Banner Section */}
-      <section className="py-12 md:py-16 border-b border-gray-200 bg-[rgb(180,94,207)]">
+      <section className="py-12 md:py-16 border-b border-gray-200 bg-[black]">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
       {/* Left side: Heading and Text */}
       <div className="lg:w-1/2">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight">
-          Connect To Your Target Audience
+          Know more about email list
         </h1>
         <p className="text-base md:text-lg text-white/90 leading-relaxed mb-3 md:mb-4">
-          DataCaptive will guide you on finding and connecting with your target audience.
+          360Airo will guide you on finding and connecting with your target audience.
         </p>
         <p className="text-base md:text-lg text-white/90 leading-relaxed">
           Increase engagements with your leads through strategic articles, tools, and tactics for GDPR compliance, lead generation, database management, and sales optimization.
@@ -95,7 +95,7 @@ export default async function ConnectPage() {
       <div className="lg:w-1/2 mt-8 lg:mt-0">
         <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-2xl">
           <img 
-            src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" 
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
             alt="Business team connecting and collaborating" 
             className="w-full h-64 md:h-96 object-cover"
           />
@@ -136,7 +136,7 @@ export default async function ConnectPage() {
       </section>
 
       {/* Featured Articles Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-4 md:py-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-black">
@@ -164,25 +164,9 @@ export default async function ConnectPage() {
         </div>
       </section>
 
-      
-      {/* Regular Posts Section */}
-      <section className="py-6 md:py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          
-          {/* Show More Button */}
-          {posts && posts.length > 0 && (
-            <div className="mt-12 text-center">
-              <button className="px-8 py-3 bg-black text-purple font-medium rounded-lg hover:bg-gray-800 transition-colors duration-300">
-                View All Articles
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
 
       {/* Newsletter Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-blue-50 to-purple-50">
+      <section className="py-2 md:py-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Newsletter />
         </div>

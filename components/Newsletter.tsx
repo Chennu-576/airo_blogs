@@ -29,7 +29,7 @@ export default function Newsletter() {
     >
       <div className="max-w-2xl mx-auto text-center">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 bg-white bg-opacity-20">
-          <Mail className="w-8 h-8 text-white" />
+          <Mail className="w-8 h-12 text-white" />
         </div>
         
         <h2 className="text-3xl font-bold text-white mb-4">

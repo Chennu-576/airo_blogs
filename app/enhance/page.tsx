@@ -65,7 +65,7 @@ export default async function ConnectPage() {
   return (
     <div className="bg-white">
       {/* Banner Section */}
-      <section className="py-12 md:py-16 border-b border-gray-200 bg-[rgb(180,94,207)]">
+      <section className="py-12 md:py-16 border-b border-gray-200 bg-[black]">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
       {/* Left side: Heading and Text */}
@@ -109,7 +109,7 @@ export default async function ConnectPage() {
 
       
       {/* Editor Picks Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-8 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div>
@@ -136,7 +136,7 @@ export default async function ConnectPage() {
       </section>
 
       {/* Featured Articles Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-4 md:py-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-black">
@@ -164,25 +164,10 @@ export default async function ConnectPage() {
         </div>
       </section>
 
-      
-      {/* Regular Posts Section */}
-      <section className="py-6 md:py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          
-          {/* Show More Button */}
-          {posts && posts.length > 0 && (
-            <div className="mt-12 text-center">
-              <button className="px-8 py-3 bg-black text-purple font-medium rounded-lg hover:bg-gray-800 transition-colors duration-300">
-                View All Articles
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
+  
 
       {/* Newsletter Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-blue-50 to-purple-50">
+      <section className="py-0 md:py-0 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Newsletter />
         </div>
