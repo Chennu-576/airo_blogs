@@ -40,8 +40,9 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-black transition-colors">
-              <Search className="w-5 h-5" />
+            <button className="bg-[black] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[rgb(180,94,207)] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md">
+              {/* <Search className="w-5 h-5" /> */}
+              Subscribe
             </button>
             <button
               className="md:hidden text-gray-700 hover:text-black transition-colors"
