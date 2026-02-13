@@ -44,7 +44,7 @@ const BlogHeroStacked = () => {
   ];
 
 return (
-  <section className="relative min-h-[90vh] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 overflow-hidden">
+  <section className="relative min-h-[90vh] bg-gradient-to-br from-slate-50 via-blue-300 to-indigo-300 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
