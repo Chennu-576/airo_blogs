@@ -209,12 +209,39 @@ import { Twitter, Linkedin, Instagram, Facebook } from "lucide-react";
 
 const sections = [
   'Introduction',
-  'Why Data Segmentation Matters',
-  'Types of Segmentation',
-  'Advanced Strategies',
-  'Best Practices',
+  'Why Scaling Email Without Planning Hurts Deliverability',
+  'What Is a Free Tools Mailbox Calculator?',
+  'Why a Mailbox Calculator Matters for Cold Email Campaigns',
+  'How a Mailbox Calculator Tool Works',
+  'Planning Volume the Right Way',
+  'Free Tools Mailbox Calculator vs Guessing',
+  'Try Our Free Mailbox Calculator Before You Scale',
   'Conclusion',
-];
+]as const;
+
+type SectionType = typeof sections[number];
+
+// ✅ Add section content mapping
+const sectionContent: Record<string, string> = {
+  'Introduction': 'Scaling email outreach isn’t just about writing better emails or sending more messages. One of the most common (and expensive) mistakes teams make is scaling without understanding how many mailboxes they actually need — and what that means for deliverability. That’s where a Free tools mailbox calculator becomes essential. Before increasing volume, adding domains, or launching new campaigns, a mailbox calculator helps you plan sending limits realistically and protect sender reputation.',
+  
+  'Why Scaling Email Without Planning Hurts Deliverability': 'Most email deliverability issues don’t come from bad intent — they come from overloading inboxes, When teams scale too fast:Mailboxes send more than they can safely handle, Bounce rates increase, Spam complaints rise, Sender reputation drops quietly, Once reputation is damaged, even normal emails start landing in spam. Recovering from that takes weeks — sometimes months, Using a Free tools mailbox calculator allows you to plan outreach volume before problems start.',
+  
+  'What Is a Free Tools Mailbox Calculator?': 'A Free tools mailbox calculator is a utility that helps determine how many mailboxes you can safely send emails to without compromising deliverability. It considers factors like mailbox capacity, sending frequency, and recipient engagement to provide recommendations for optimal email volume.',
+  
+  'Why a Mailbox Calculator Matters for Cold Email Campaigns': 'Cold email is different from newsletters or transactional emails. Providers are stricter, and mistakes compound faster, A Free tools mailbox calculator helps you: Avoid overloading individual mailboxes, Distribute volume across domains and inboxes, Reduce reliance on guesswork, Lower the risk of spam flags,For teams running cold outreach, this planning step often matters more than subject lines or templates.',
+  
+  'How a Mailbox Calculator Tool Works': 'A typical mailbox calculator tool online considers: Number of emails you want to send per day, Safe sending limits per mailbox, Recommended buffer to keep spam rates low, Some calculators also factor in: Warm-up stage vs steady-state sending, Campaign type (cold vs warm)',
+  
+  'Planning Volume the Right Way': 'A Free bulk email calculator helps teams see: When adding more mailboxes makes sense, When lowering daily sends is safer, How to scale gradually instead of all at once, This prevents the “send more, fix later” trap that damages domains.',
+
+  'Free Tools Mailbox Calculator vs Guessing': 'With a Free tools mailbox calculator: Volume decisions are intentional, Risk is visible upfront, Scaling becomes predictable, It’s not about being conservative — it’s about being controlled.',
+
+  'Try Our Free Mailbox Calculator Before You Scale': 'If you’re planning to increase volume, don’t rely on assumptions, Try our Free Mailbox Calculator to estimate how many inboxes you need and how to scale without putting deliverability at risk, It’s a simple step — and often the difference between campaigns that grow and campaigns that get blocked.',
+
+  'Conclusion': 'Scaling outreach safely isn’t about sending more emails — it’s about sending smarter, A Free tools mailbox calculator gives teams clarity before volume increases, helping protect sender reputation, reduce risk, and keep campaigns sustainable.'
+
+};
 
 export default function BlogDetailPage() {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -388,7 +415,7 @@ export default function BlogDetailPage() {
             {sections.map((title, i) => (
               <section key={i} id={`section-${i}`}>
                 <h2
-                  className={`text-2xl font-semibold mb-4 ${
+                  className={`text-xl font-semibold mb-4 ${
                     activeSection === i
                       ? 'text-[#b45ecf]'
                       : 'text-black'
@@ -397,7 +424,7 @@ export default function BlogDetailPage() {
                   {title}
                 </h2>
                 <p className="leading-relaxed text-black">
-                  Lorem ipsum content goes here. Replace with real blog copy.
+                   {sectionContent[title]}
                 </p>
               </section>
             ))}
