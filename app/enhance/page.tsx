@@ -1,7 +1,7 @@
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import { format } from 'date-fns';
-import { featuredPosts, editorsPicks } from '../blog/blogdata';
+import { editorsPicks } from '../blog/blogdata';
 import Link from 'next/link';
 
 export const revalidate = 60;
@@ -69,12 +69,12 @@ export default async function ConnectPage() {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
       {/* Left side: Heading and Text */}
-      <div className="lg:w-1/2">
+      <div className="lg:w-[60%]">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight">
-          Connect To Your Target Audience
+          B2B intelligence for smarter outreach
         </h1>
         <p className="text-base md:text-lg text-white/90 leading-relaxed mb-3 md:mb-4">
-          DataCaptive will guide you on finding and connecting with your target audience.
+          Airo will guide you on finding and connecting with your target audience.
         </p>
         <p className="text-base md:text-lg text-white/90 leading-relaxed">
           Increase engagements with your leads through strategic articles, tools, and tactics for GDPR compliance, lead generation, database management, and sales optimization.
@@ -92,17 +92,25 @@ export default async function ConnectPage() {
       </div>
       
       {/* Right side: Image */}
-      <div className="lg:w-1/2 mt-8 lg:mt-0">
-        <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-2xl">
-          <img 
-            src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" 
-            alt="Business team connecting and collaborating" 
-            className="w-full h-64 md:h-96 object-cover"
-          />
-          {/* Changed gradient to complement the purple background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[rgb(180,94,207)]/40 to-[rgb(180,94,207)]/20"></div>
-        </div>
-      </div>
+      {/* DEMO FORM */}
+          <aside className="w-full lg:w-[40%]">
+            <div className="sticky top-28 rounded-xl bg-[rgb(180,94,207)] p-6">
+              <h3 className="text-xl font-semibold text-white">
+                Get a Free Demo
+              </h3>
+
+              <form className="mt-6 space-y-4">
+                <input className="w-full rounded-md px-4 py-2 text-sm" placeholder="Full Name" />
+                <input className="w-full rounded-md px-4 py-2 text-sm" placeholder="Email Address" />
+                <input className="w-full rounded-md px-4 py-2 text-sm" placeholder="Phone Number" />
+                <input className="w-full rounded-md px-4 py-2 text-sm" placeholder="Website URL" />
+                <textarea className="w-full rounded-md px-4 py-2 text-sm" rows={3} placeholder="Additional Info" />
+                <button className="w-full bg-[black] text-white py-2 rounded-md font-medium">
+                  Request Demo
+                </button>
+              </form>
+            </div>
+          </aside>
     </div>
   </div>
 </section>
@@ -136,35 +144,7 @@ export default async function ConnectPage() {
       </section>
 
       {/* Featured Articles Section */}
-      <section className="py-4 md:py-4 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-black">
-              Featured Articles
-            </h2>
-              
-            <Link 
-              href="/blog/featured" 
-              className="text-[rgb(180,94,207)] hover:underline font-medium"
-            >
-              View All
-            </Link>
-          </div>
-              
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredPosts.map((post, index) => (
-              <BlogCard 
-                key={post.id} 
-                {...post} 
-                featured 
-                priority={index < 3}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-  
+        
 
       {/* Newsletter Section */}
       <section className="py-0 md:py-0 bg-white">

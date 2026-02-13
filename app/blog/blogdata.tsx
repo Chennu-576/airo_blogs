@@ -94,8 +94,17 @@ export const popularPosts: BlogPost[] = [
     date: 'Mar 3, 2024',
     readTime: '9 min read',
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  }
-
+  },
+  {
+    id: '7',
+    title: 'Building High-Converting Email Campaigns',
+    excerpt: 'Proven strategies to increase your email open and click-through rates.',
+    category: 'Email Marketing',
+    date: 'Mar 10, 2024',
+    readTime: '10 min read',
+    image: 'https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+  },
+  
 ];
 
 export const editorsPicks: BlogPost[] = [
@@ -125,7 +134,36 @@ export const editorsPicks: BlogPost[] = [
     date: 'Feb 20, 2024',
     readTime: '9 min read',
     image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-  }
+  },
+  {
+    id: '7',
+    title: 'Building High-Converting Email Campaigns',
+    excerpt: 'Proven strategies to increase your email open and click-through rates.',
+    category: 'Email Marketing',
+    date: 'Mar 10, 2024',
+    readTime: '10 min read',
+    image: 'https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: '5',
+    title: 'Social Media Marketing Trends',
+    excerpt: 'What\'s working in social media marketing this year.',
+    category: 'Social Media',
+    date: 'Mar 5, 2024',
+    readTime: '5 min read',
+    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+  },
+
+  {
+    id: 'data-segmentation',
+    title: 'Advanced Data Segmentation Strategies for 2024',
+    excerpt: 'Learn how to segment your B2B data for maximum conversion rates and ROI.',
+    category: 'Data Analytics',
+    date: 'Mar 15, 2024',
+    readTime: '8 min read',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+  },
+
 ];
 
 export const allBlogs: BlogPost[] = [

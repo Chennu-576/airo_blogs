@@ -5,9 +5,10 @@ import BlogCard from '@/components/BlogCard';
 import ResourcesSection from '@/components/ResourcesSection';
 import Newsletter from '@/components/Newsletter';
 // import Footer from '@/components/Footer';
-import { ArrowRight, TrendingUp, Users, BookOpen, Database, Zap, Target, } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, BookOpen, Database, Zap, Target, CheckCircle2} from "lucide-react";
 import { featuredPosts, popularPosts, editorsPicks } from './blog/blogdata'; // Fixed path
 import Link from 'next/link';
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion, Variants} from "framer-motion";
@@ -35,17 +36,14 @@ const BlogHeroStacked = () => {
     },
     {
       id: 4,
-      title: "how B2B email list are useful?",
-      href: "/blog/how-b2b-email-list-are-useful",
+      title: "Building High-Converting Email Campaigns?",
+      href: "/blog/building-high-converting-email-campaigns",
       reads: "8.2k"
     },
     
   ];
 
-
-  
-
-  return (
+return (
   <section className="relative min-h-[90vh] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -444,6 +442,144 @@ const BlogHeroStacked = () => {
 //   );
 // };
 
+const WhyChooseAiro = () => {
+  const benefits = [
+    "98% deliverability guarantee on all email lists",
+    "Verified B2B contacts across 50+ industries",
+    "Weekly data updates to ensure accuracy",
+    "GDPR & CCPA compliant data sourcing",
+    "AI-powered contact enrichment",
+    "Dedicated account manager for enterprise clients"
+  ];
+
+  return (
+    <section className="py-4 md:py-8 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-4xl font-bold text-black mb-6">
+            Why Choose <span className="text-[rgb(180,94,207)]">Airo</span>'s B2B Data?
+          </h2>
+          <p className="text-lg text-gray-600 max-w-5xl mx-auto">
+            If you're tired of wasting time and resources on ineffective prospecting methods, your search ends here. 
+            We pride ourselves on being one of the world's best B2B Data Providers. At Airo, we empathize with business owners, marketers, and sales professionals who often face 
+                challenges when it comes to acquiring the right clients. With us, you're sure to find the right 
+                solution to your prospecting issues.
+          </p>
+        </motion.div>
+
+        {/* Content Grid - Image Left, Text Right */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          {/* Left: Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative -mt-16"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/images/y_choose.png"
+                alt="Airo B2B Data Platform"
+                className="w-full h-auto object-cover"
+              />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-[rgb(180,94,207)]/20 to-transparent mix-blend-overlay" />
+            </div>
+            
+            {/* Floating badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="absolute -bottom-6 -right-6 bg-[rgb(180,94,207)] text-white px-6 py-4 rounded-xl shadow-xl"
+            >
+              <p className="text-2xl font-bold">50K+</p>
+              <p className="text-sm opacity-90">Active Users</p>
+            </motion.div>
+          </motion.div>
+
+          {/* Right: Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="space-y-8"
+          >
+            {/* Short paragraph */}
+            <div className="space-y-4">
+              {/* <p className="text-gray-700 leading-relaxed text-lg">
+                At Airo, we empathize with business owners, marketers, and sales professionals who often face 
+                challenges when it comes to acquiring the right clients. With us, you're sure to find the right 
+                solution to your prospecting issues.
+              </p> */}
+              
+              <p className="text-gray-700 leading-relaxed text-lg font-medium">
+                <span className="text-[rgb(180,94,207)] font-bold">The Solution</span> to Your Prospecting Challenges
+              </p>
+              
+              <p className="text-gray-700 leading-relaxed">
+                Every business needs a verified B2B sales database that allows it to attain verified online B2B leads 
+                and achieve its marketing goals without any hassle. A valid database of prospects often turns out to 
+                be the most valuable asset of the business.
+              </p>
+            </div>
+
+            {/* Benefits with checkmarks */}
+            <div className="space-y-4">
+              <p className="text-xl font-semibold text-black">
+                We are a notch above the rest of the B2B Database companies. With our databases, you get:
+              </p>
+              
+              <div className="grid sm:grid-cols-2 gap-4 mt-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                    className="flex items-start gap-3"
+                  >
+                    <CheckCircle2 className="w-5 h-5 text-[rgb(180,94,207)] flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
+              <button className="bg-[rgb(180,94,207)] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[rgb(160,74,187)] transition-colors shadow-lg hover:shadow-xl">
+                Get Started Today
+              </button>
+            </motion.div> */}
+          </motion.div>
+        </div>
+
+        {/* Stats Bar at Bottom */}
+        
+      </div>
+    </section>
+  );
+};
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -672,8 +808,9 @@ export default function HomePage() {
 </section>
       
       {/* <ResourcesSection /> */}
+          <WhyChooseAiro />
       
-      <section className="py-4 md:py-8 bg-white">
+      <section className="py-2 md:py-4 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     {/* Header */}
@@ -687,7 +824,7 @@ export default function HomePage() {
     </div>
 
     {/* Cards Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 md:mt-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 md:mt-12">
 
       {/* Card */}
       <a
