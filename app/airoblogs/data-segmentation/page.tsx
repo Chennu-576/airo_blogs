@@ -431,17 +431,14 @@ const handleSubmit = async (e: React.FormEvent) => {
       body: JSON.stringify(formData),
     });
 
-    if (res.ok) {
-      alert("Form submitted successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-    } else {
-      alert("Something went wrong.");
-    }
+    const data = await res.json();  // Parse the response
+
+    if (res.ok && data.success) {
+  alert("Form submitted successfully!");
+  setFormData({ name: "", email: "", phone: "", message: "" });
+} else {
+  alert(data.error || "Something went wrong.");
+}
   } catch (error) {
     alert("Server error.");
   }

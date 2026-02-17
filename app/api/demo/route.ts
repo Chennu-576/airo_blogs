@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+console.log('ADMIN_EMAIL:', process.env.ADMIN_EMAIL ? '✅ set' : '❌ undefined');
+console.log('ADMIN_PASS:', process.env.ADMIN_PASS ? '✅ set' : '❌ undefined');
+
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
