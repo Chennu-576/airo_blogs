@@ -585,7 +585,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <h3 className="mb-4 text-md font-semibold text-black">
                 Table of Contents
               </h3>
-              <ul className="space-y-3 text-sm">
+              <ul className="space-y-3 text-xs">
                 {sections.map((item, i) => (
                   <li key={i}>
                     <a
