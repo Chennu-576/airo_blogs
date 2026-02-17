@@ -409,6 +409,46 @@ export default function BlogDetailPage() {
   const blog = featuredPosts.find(
     (post) => post.id === 'data-segmentation'
   );
+  const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+});
+
+const [loading, setLoading] = useState(false);
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setLoading(true);
+
+  try {
+    const res = await fetch("/api/demo", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      alert("Form submitted successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } else {
+      alert("Something went wrong.");
+    }
+  } catch (error) {
+    alert("Server error.");
+  }
+
+  setLoading(false);
+};
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -540,7 +580,7 @@ export default function BlogDetailPage() {
 
       {/* CONTENT */}
       <section className="mx-auto max-w-7xl px-6 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(680px,1fr)_340px] gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr_340px] gap-8">
 
           {/* TOC */}
           <aside className="hidden lg:block">
@@ -548,7 +588,7 @@ export default function BlogDetailPage() {
               <h3 className="mb-4 text-md font-semibold text-black">
                 Table of Contents
               </h3>
-              <ul className="space-y-3 text-md">
+              <ul className="space-y-3 text-sm">
                 {sections.map((item, i) => (
                   <li key={i}>
                     <a
@@ -598,7 +638,7 @@ export default function BlogDetailPage() {
           </article>
 
           {/* DEMO FORM */}
-          <aside className="block">
+          {/* <aside className="block">
             <div className="sticky top-28 rounded-xl bg-[rgb(180,94,207)] p-6">
               <h3 className="text-xl font-semibold text-white">
                 Get a Free Demo
@@ -617,7 +657,75 @@ export default function BlogDetailPage() {
                 </button>
               </form>
             </div>
-          </aside>
+          </aside> */}
+          {/* DEMO FORM */}
+<aside className="block">
+  <div className="sticky top-28 rounded-xl bg-[rgb(180,94,207)] p-6">
+    <h3 className="text-xl font-semibold text-white">
+      Get a Free Demo
+    </h3>
+
+    <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+      <input
+        className="w-full rounded-md px-4 py-2 text-sm"
+        placeholder="Full Name*"
+        required
+        value={formData.name}
+        onChange={(e) =>
+          setFormData({ ...formData, name: e.target.value })
+        }
+      />
+
+      <input
+        type="email"
+        className="w-full rounded-md px-4 py-2 text-sm"
+        placeholder="Business Email ID*"
+        required
+        value={formData.email}
+        onChange={(e) =>
+          setFormData({ ...formData, email: e.target.value })
+        }
+      />
+
+      <input
+        className="w-full rounded-md px-4 py-2 text-sm"
+        placeholder="Phone Number*"
+        required
+        value={formData.phone}
+        onChange={(e) =>
+          setFormData({ ...formData, phone: e.target.value })
+        }
+      />
+
+      <textarea
+        className="w-full rounded-md px-4 py-2 text-sm"
+        rows={3}
+        placeholder="Tell Your Requirement*"
+        required
+        value={formData.message}
+        onChange={(e) =>
+          setFormData({ ...formData, message: e.target.value })
+        }
+      />
+
+      <p className="text-xs text-white">
+        If you don't have a business email{" "}
+        <a href="#" className="underline font-medium">
+          Click here
+        </a>
+      </p>
+
+      <button
+        type="submit"
+        disabled={loading}
+        className="w-full bg-black text-white py-2 rounded-md font-medium"
+      >
+        {loading ? "Submitting..." : "SUBMIT"}
+      </button>
+    </form>
+  </div>
+</aside>
+
         </div>
       </section>
 
